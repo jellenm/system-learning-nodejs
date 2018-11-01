@@ -11,6 +11,10 @@
   "author": "jellen",
   "license": "MIT",
   "devDependencies": {
+    "css-loader": "^1.0.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
