@@ -9,5 +9,7 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+  }
 }
