@@ -7,6 +7,7 @@ module.exports = {
       {
           name:'about',
           title:'about plus'
+          
       }
   ]
 };
