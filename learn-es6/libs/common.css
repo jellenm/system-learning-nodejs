@@ -3,3 +3,11 @@ body,html{
     padding: 0;
     background: #cccccc;
 }
+pre{
+    font-family: monospace;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 20px;
+    background: #2b2b2b;
+    color: #cccccc;
+}
