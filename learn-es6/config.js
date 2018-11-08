@@ -12,5 +12,9 @@ module.exports  = {
             index:'aboutString',
             title:'字符串扩展'
         },
+        {
+            index:'aboutRegExp',
+            title:'正则扩展'
+        },
     ]
 }
