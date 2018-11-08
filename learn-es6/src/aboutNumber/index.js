@@ -1,0 +1,45 @@
+{
+    console.log("===Number.isNaN()/Number.isInfinite()===");
+    console.log('isNaN--123',isNaN(123));
+    console.log('Number.isNaN--123',Number.isNaN(123));
+    console.log('isNaN--NaN',isNaN(NaN));
+    console.log('Number.isNaN--NaN',Number.isNaN(NaN));
+    console.log('isNaN--str-abc',isNaN('abc'));
+    console.log('Number.isNaN--str-abc',Number.isNaN('abc'));
+    console.log('isNaN--str-123',isNaN('123'));
+    console.log('Number.isNaN--str-123',Number.isNaN('123'));
+}
+
+{
+    console.log('===Number.isInteger()===');
+    console.log('Number.isInteger-123',Number.isInteger(123));
+    console.log('Number.isInteger-123.0',Number.isInteger(123.0));
+    console.log('Number.isInteger-str-abc',Number.isInteger('abc'));
+    console.log('Number.isInteger-str-123',Number.isInteger('123'));
+}
+
+{
+    console.log('===Number.EPSILON===');
+    console.log('Number.EPSILON',Number.EPSILON);
+    console.log('Number.EPSILON == Math.pow(2,-52)',Number.EPSILON == Math.pow(2,-52));
+}
+
+{
+    console.log('====Number.isSafeInteger()===');
+    console.log('Number.isSafeInteger-Math.pow(2,53)',Number.isSafeInteger(Math.pow(2,53)));
+    console.log('Number.isSafeInteger-Math.pow(2,53)-1',Number.isSafeInteger(Math.pow(2,53)-1));
+    console.log('Number.isSafeInteger-Number.MAX_SAFE_VALUE',Number.isSafeInteger(Number.MAX_SAFE_INTEGER));
+    console.log('Number.isSafeInteger-Number.MAX_SAFE_VALUE+1',Number.isSafeInteger(Number.MAX_SAFE_INTEGER+1));
+    console.log('Number.isSafeInteger-Math.pow(2,-53)',Number.isSafeInteger(Math.pow(2,-53)));
+    console.log('Number.isSafeInteger-Math.pow(2,-53)-1',Number.isSafeInteger(Math.pow(2,-53)-1));
+    console.log('Number.isSafeInteger-Number.MIN_SAFE_VALUE',Number.isSafeInteger(Number.MIN_SAFE_INTEGER));
+    console.log('Number.isSafeInteger-Number.MIN_SAFE_VALUE+1',Number.isSafeInteger(Number.MIN_SAFE_INTEGER-1));
+}
+
+{
+    console.log('===指数运算符**===');
+    console.log('2**3',2**3);
+    console.log("2**3**4",2**3**4);
+}
+
+

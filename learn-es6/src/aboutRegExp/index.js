@@ -29,8 +29,8 @@ console.log('===ES6扩展===');
 
 {
     console.log('matchAll');
-    let str = 'test1test2test3test4';
-    let reg = /test(\d?)/;
-    console.log('matchAll-has',str.matchAll(reg));
-    console.log('matchAll-none',str.matchAll(/test1234/));
+    // let str = 'test1test2test3test4';
+    // let reg = /test(\d?)/;
+    // console.log('matchAll-has',str.matchAll(reg));
+    // console.log('matchAll-none',str.matchAll(/test1234/));
 }

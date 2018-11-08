@@ -16,5 +16,9 @@ module.exports  = {
             index:'aboutRegExp',
             title:'正则扩展'
         },
+        {
+            index:'aboutNumber',
+            title:'数值扩展'
+        },
     ]
 }
