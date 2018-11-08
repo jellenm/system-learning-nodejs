@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+console.log('===includes() startsWidth() endsWidth()===');
+{
+    let str = 'hello world!';
+    console.log('includes',str.includes('wor'));
+    console.log('startsWidth',str.startsWith('o',4));
+    console.log('endsWidth',str.endsWith('l',10));
+}
+
+console.log('===repeat()===');
+{
+    let str = 'hi';
+    console.log('repeat',str.repeat(3));
+    console.log('repeat = NaN,0,-0.3',str.repeat(NaN),str.repeat(0),str.repeat(-0.3));
+    try {
+        console.log('-3',str.repeat(-3));
+    }catch (e) {
+        // throw new Error('repeat(-3)')
+    }
+    console.log('str abc',str.repeat('abc'));
+    console.log('boolean true',str.repeat(true));
+}
+
+console.log('===padStart() padEnd()===');
+{
+    let str = 'x';
+    console.log('padStart',str.padStart(3,'n'));
+    console.log('padEnd',str.padEnd(3,'n'));
+    console.log('n=0',str.padStart(0));
+}
+</pre>
+</body>
+</html>

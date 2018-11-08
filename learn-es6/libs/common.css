@@ -4,10 +4,19 @@ body,html{
     background: #cccccc;
 }
 pre{
-    font-family: monospace;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
     box-sizing: border-box;
     font-size: 14px;
-    padding: 20px;
+    padding:20px;
     background: #2b2b2b;
     color: #cccccc;
+    margin: 0;
+}
+
+.link-href{
+    margin: 20px;
+}
+.link-href a{
+    display: block;
+    color: #000;
 }

@@ -7,6 +7,10 @@ module.exports  = {
         {
             index:'destructuring',
             title:'解构赋值'
-        }
+        },
+        {
+            index:'aboutString',
+            title:'字符串扩展'
+        },
     ]
 }
