@@ -20,5 +20,9 @@ module.exports  = {
             index:'aboutNumber',
             title:'数值扩展'
         },
+        {
+            index:'aboutFunction',
+            title:'函数扩展'
+        },
     ]
 }
