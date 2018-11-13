@@ -24,5 +24,9 @@ module.exports  = {
             index:'aboutFunction',
             title:'函数扩展'
         },
+        {
+            index:'aboutArray',
+            title:'数组扩展'
+        },
     ]
 }
