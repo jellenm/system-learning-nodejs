@@ -28,5 +28,9 @@ module.exports  = {
             index:'aboutArray',
             title:'数组扩展'
         },
+        {
+            index:'aboutObject',
+            title:'对象扩展'
+        },
     ]
 }

@@ -1,0 +1,190 @@
+{
+    console.log('===对象的简写===');
+    let foo = 'foo';
+    console.log('属性的简写',{foo});
+    let func = {
+        age:12,
+        getAge(){
+            return this.age;
+        }
+    };
+    console.log('方法的简写',func.getAge());
+}
+
+{
+    console.log('===属性名表达式===');
+    let hello = 'hello world';
+    let objName = {};
+    let obj = {
+        ['hello text']:'hello text',
+        [hello]:'hello world',
+        [objName]:'objName'
+    };
+    console.log('hello',obj[hello],obj['hello text']);
+    console.log('keys',Object.keys(obj));
+}
+
+{
+    console.log('===方法的name===');
+    let symbolName = Symbol('description');
+    let obj = {
+        getAge() {},
+        get foo() {},
+        set foo(x) {},
+        symbolName() {}
+    };
+    console.log('obj.getAge.name',obj.getAge.name);
+    console.log('Object.getOwnPropertyDescriptor(obj,"foo").get.name',Object.getOwnPropertyDescriptor(obj,'foo').get.name);
+    console.log('obj.symbolName.name',obj.symbolName.name);
+}
+
+{
+    console.log('===属性的可枚举性===');
+    let objPro = {
+        parent:'Jim',
+        mather:'Cathrine'
+    };
+    let obj = {
+        name:'Sam',
+        age:12
+    };
+    Object.setPrototypeOf(obj,objPro);
+    Object.defineProperty(obj,'blood',{
+        enumerable:false,
+        value:'AB'
+    });
+    let forInKeys = [];
+    for(let i in obj){
+        forInKeys.push(i);
+    }
+    let objectKeys = Object.keys(obj);
+    let objectStringify = JSON.stringify(obj);
+    let objectAssign = Object.assign({},obj);
+    console.log('forInKeys',forInKeys);
+    console.log('objectKeys',objectKeys);
+    console.log('objectStringify',objectStringify);
+    console.log('objectAssign',objectAssign);
+}
+
+{
+    console.log('===属性的遍历===');
+    let symbolName = Symbol('description');
+    let objPro = {
+        parent:'Jim',
+        mather:'Cathrine'
+    };
+    let obj = {
+        name:'Sam',
+        age:12,
+        [symbolName]:'symbol'
+    };
+    Object.setPrototypeOf(obj,objPro);
+    Object.defineProperty(obj,'blood',{enumerable:false,value:'B'});
+    let forInKeys = [];
+    for(let i in obj){
+        forInKeys.push(i);
+    }
+    let objectKeys = Object.keys(obj);
+    let objectGetOwnPropertyNames = Object.getOwnPropertyNames(obj);
+    let objectGetOwnPropertySymbols = Object.getOwnPropertySymbols(obj);
+    let reflectOwnKeys = Reflect.ownKeys(obj);
+    console.log('forInKeys',forInKeys);
+    console.log('objectKeys',objectKeys);
+    console.log('objectGetOwnPropertyNames',objectGetOwnPropertyNames);
+    console.log('objectGetOwnPropertySymbols',objectGetOwnPropertySymbols);
+    console.log('reflectOwnKeys',reflectOwnKeys);
+}
+
+{
+    console.log('===super===');
+    let objPro = {
+        age:13,
+    };
+    let obj = {
+        name:'Sam',
+        age:12,
+        getSuperAge() {
+            return super.age;
+        },
+        getThisAge(){
+            return this.age;
+        },
+        getThisAge1:function(){
+            return this.age;
+        },
+        // getSuperAge1:function(){  报错,暂时只支持方法的简写
+        //     return super.age;
+        // }
+    };
+    Object.setPrototypeOf(obj,objPro);
+    console.log('this.age',obj.getThisAge());
+    console.log('super.age',obj.getSuperAge());
+    console.log('getThisAge1.age',obj.getThisAge1());
+}
+
+{
+    console.log('===解构赋值===');
+    let objPro = {
+        getAge() {
+            return this.age;
+        }
+    };
+    let obj = {
+        name:'Sam',
+        age:12
+    };
+    Object.setPrototypeOf(obj,objPro);
+    console.log('{...obj}',{...obj});
+}
+
+{
+    console.log('===扩展运算符...===');
+    let o = {x:1,y:2};
+    let obj = {
+        name:'Sam',
+        age:12
+    };
+    let objPro = {
+        age:13,
+        blood:'B',
+        getAge() {
+            return this.age;
+        }
+    };
+    Object.setPrototypeOf(obj,objPro);
+    let cloneObject = {...obj,...o};
+    console.log('{...obj,...o}',cloneObject);
+    // console.log('getPrototypeOf-getAge',cloneObject.getAge()); //报错
+    console.log('getPrototypeOf',Object.getPrototypeOf(cloneObject));
+
+
+    let cloneAssign = Object.assign(Object.create(Object.getPrototypeOf(obj)),obj);
+    console.log('Object.assign',cloneAssign);
+    console.log('Object.assign-getAge',cloneAssign.getAge());
+    console.log('Object.assign-Reflect',Reflect.ownKeys(cloneAssign));
+    console.log('Object.assign-getPrototypeOf',Object.getPrototypeOf(obj));
+    console.log('Object.assign-getOwnPropertyDescriptors',Object.getOwnPropertyDescriptors(obj));
+
+    let cloneCreate = Object.create(Object.getPrototypeOf(obj),Object.getOwnPropertyDescriptors(obj));
+    console.log('cloneCreate',cloneCreate);
+    console.log('cloneCreate-prototype',Object.getPrototypeOf(obj));
+    console.log('cloneCreate-getAge',obj.getAge());
+
+    let createTool = Object.create(obj,{x:{enumerable:true,value:'x'}});
+    console.log('createTool',createTool);
+    console.log('{...createTool}',{...createTool});
+    console.log('getPrototypeOf',Object.getPrototypeOf(createTool) == obj);
+
+    let assignTool = Object.assign(obj,{x:0,y:0});
+    console.log('assignTool',assignTool);
+    console.log('{...assignTool}',{...assignTool});
+    console.log('getPrototypeOf',Object.getPrototypeOf(assignTool) == objPro);
+}
+
+
+
+
+
+
+
+
