@@ -174,11 +174,13 @@
     console.log('createTool',createTool);
     console.log('{...createTool}',{...createTool});
     console.log('getPrototypeOf',Object.getPrototypeOf(createTool) == obj);
+    console.log('==',createTool == obj);
 
     let assignTool = Object.assign(obj,{x:0,y:0});
     console.log('assignTool',assignTool);
     console.log('{...assignTool}',{...assignTool});
     console.log('getPrototypeOf',Object.getPrototypeOf(assignTool) == objPro);
+    console.log('==',assignTool == obj);
 }
 
 

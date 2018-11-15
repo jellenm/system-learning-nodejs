@@ -32,5 +32,9 @@ module.exports  = {
             index:'aboutObject',
             title:'对象扩展'
         },
+        {
+            index:'aboutObjectNewMethods',
+            title:'对象的新增方法'
+        },
     ]
 }
