@@ -36,5 +36,13 @@ module.exports  = {
             index:'aboutObjectNewMethods',
             title:'对象的新增方法'
         },
+        {
+            index:'aboutSymbol',
+            title:'Symbol'
+        },
+        {
+            index:'aboutSetAndMap',
+            title:'Set和Map'
+        },
     ]
 }
