@@ -44,5 +44,13 @@ module.exports  = {
             index:'aboutSetAndMap',
             title:'Set和Map'
         },
+        {
+            index:'aboutProxy',
+            title:'关于Proxy'
+        },
+        {
+            index:'aboutReflect',
+            title:'关于Reflect'
+        },
     ]
-}
+};
