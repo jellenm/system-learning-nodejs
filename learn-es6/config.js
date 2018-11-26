@@ -52,5 +52,13 @@ module.exports  = {
             index:'aboutReflect',
             title:'关于Reflect'
         },
+        {
+            index:'aboutPromise',
+            title:'关于Promise'
+        },
+        {
+            index:'aboutIterator',
+            title:'关于Iterator'
+        },
     ]
 };
