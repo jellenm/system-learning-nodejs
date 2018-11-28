@@ -91,6 +91,7 @@ console.log('=======Iterator======');
             return returnObj;
         }
         return() {
+            this.index = 0;
             return { done:true}
         }
     }
@@ -107,6 +108,21 @@ console.log('=======Iterator======');
     //     }
     //     console.log('ttt',i)
     // }
+
+    let arr = [1,2,3,4,5,6];
+    for(let i in arr){
+        if(i ==3 ){
+            break;
+        }
+        console.log('arr-i-1',i);
+    }
+
+    for(let i in arr){
+        if(i ==3 ){
+            throw new Error('err');
+        }
+        console.log('arr-i-2',i);
+    }
 }
 
 {

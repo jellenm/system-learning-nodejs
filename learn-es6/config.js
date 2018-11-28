@@ -60,5 +60,9 @@ module.exports  = {
             index:'aboutIterator',
             title:'关于Iterator'
         },
+        {
+            index:'aboutGenerator',
+            title:'关于Generator'
+        },
     ]
 };
