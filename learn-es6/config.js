@@ -64,5 +64,13 @@ module.exports  = {
             index:'aboutGenerator',
             title:'关于Generator'
         },
+        {
+            index:'aboutGeneratorAsync',
+            title:'关于Generator异步用法'
+        },
+        {
+            index:'aboutAsync',
+            title:'关于Async'
+        },
     ]
 };

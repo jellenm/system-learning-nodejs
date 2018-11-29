@@ -29,7 +29,15 @@ module.exports = {
     devServer: {
         contentBase:__dirname + '/dist/',
         port:7005,
-        index:'index.html'
+        index:'index.html',
+        proxy: {
+            "**": {  //axios中给请求添加 /api,用于代理标识
+                target: 'https://www.baidu.com',   //目标地址
+                secure: false, // 接受 运行在 https 上的服务
+                changeOrigin: true,
+                // pathRewrite:{'/cgi-bin':''}, //重写请求路径，把/api用空替换掉
+            }
+        },
     },
     module:{
         rules: [
