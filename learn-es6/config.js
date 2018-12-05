@@ -72,5 +72,13 @@ module.exports  = {
             index:'aboutAsync',
             title:'关于Async'
         },
+        {
+            index:'aboutClass',
+            title:'关于Class'
+        },
+        {
+            index:'aboutClassInherit',
+            title:'关于Class继承'
+        },
     ]
 };

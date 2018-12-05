@@ -1,0 +1,57 @@
+console.log('====== 类的继承 ======');
+{
+    class A {
+        static setX(v){
+            this.x = v;
+        }
+        static getX(){
+            return this.x;
+        }
+        constructor(x,y){
+            this.x = x;
+            this.y = y;
+        }
+    }
+    class B extends A{
+        constructor(...args){
+            super(...args);
+            this.x = 1;
+            this.print('this.x = 1');
+            super.x = 2;
+            this.print('super.x = 2');
+            console.log('super.x',super.x);
+        }
+        print(tips){
+            console.log('tips',tips);
+            console.log('this.x',this.x);
+            console.log('this.y',this.y);
+        }
+        static setParentX(v){
+            super.setX(v);
+        }
+        static getParentX(){
+            return super.x;
+        }
+        static setOwnX(v){
+            this.x = v;
+        }
+        static getOwnX(){
+            return this.x;
+        }
+    }
+    let b = new B(0,0);
+    let c = new B(1,1);
+    A.setX(0);
+    console.log('A.setX(0)',A.getX());
+    console.log('B.getParentX()',B.getParentX());
+    B.setParentX(2);
+    console.log('B.setParentX(2)',B.getParentX()); //注意
+    B.setOwnX(2);
+    console.log("B.setOwnX(0)",B.getOwnX());
+    b.print('static->normal');
+    console.log('===__proto___===');
+    console.log('B.__proto__ === A',B.__proto__ === A);
+    console.log('B.prototype.__proto__ === A.prototype',B.prototype.__proto__ === A.prototype);
+    console.log('b.__proto__.__proto__ === A.prototype',b.__proto__.__proto__ === A.prototype);
+    console.log('Reflect.getPrototypeOf(B) === A',Reflect.getPrototypeOf(B) === A);
+}
