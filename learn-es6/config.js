@@ -80,5 +80,9 @@ module.exports  = {
             index:'aboutClassInherit',
             title:'关于Class继承'
         },
+        {
+            index:'aboutPromiseAwait',
+            title:'PromiseAwait执行顺序'
+        },
     ]
 };
